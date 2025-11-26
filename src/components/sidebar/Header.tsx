@@ -5,12 +5,12 @@ import { SidebarTrigger } from "../ui/sidebar";
 
 const Header = () => {
   return (
-    <header className="h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full">
+    <header className="h-16 border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 sticky top-0 z-40 w-full">
       <div className="flex items-center justify-between h-full px-6 ">
         <SidebarTrigger />
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <h1 className="text-xl font-semibold">Search bar</h1>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-4">
           {/* Notifications */}
