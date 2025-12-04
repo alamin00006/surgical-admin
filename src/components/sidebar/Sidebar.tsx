@@ -23,7 +23,7 @@ import {
   Bell,
   Shield,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/helpers/utils/twMerge";
 
 // Menu items with dropdown support
 const menuItems = [

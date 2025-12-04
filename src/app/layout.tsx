@@ -6,6 +6,7 @@ import Header from "@/components/sidebar/Header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { TopNav } from "@/components/header/top-nav";
 import Sidebar from "@/components/sidebar/Sidebar";
+import { Providers } from "@/redux/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,21 +29,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <SidebarProvider>
-            <Sidebar />
-            <main className="w-full">
-              {/* <TopNav /> */}
+    <Providers>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <SidebarProvider>
+              <Sidebar />
+              <main className="w-full">
+                {/* <TopNav /> */}
 
-              {children}
-            </main>
-          </SidebarProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+                {children}
+              </main>
+            </SidebarProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </Providers>
   );
 }

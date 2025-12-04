@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { Plus } from "lucide-react";
-import { UsersTable } from "@/components/dashboard/users/UsersTable";
+import { UsersTable } from "@/components/users/UsersTable";
 
 export default function UsersPage() {
   return (

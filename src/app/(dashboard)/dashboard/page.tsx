@@ -8,15 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+
 import {
   Download,
   Eye,
@@ -35,9 +27,12 @@ import {
 
 import { useEffect, useState } from "react";
 import { useTheme } from "@/components/theme/theme-provider";
-import { StatsCard } from "@/components/dashboard/statsCard/StatsCards";
-import { RevenueChart } from "@/components/dashboard/revenue/RevenueChart";
-import { RecentSales } from "@/components/dashboard/sales/RecentSalce";
+import { StatsCard } from "@/components/statsCard/StatsCards";
+import { RevenueChart } from "@/components/revenue/RevenueChart";
+import { RecentSales } from "@/components/sales/RecentSalce";
+import DemoDataTable from "@/helpers/utils/DemoDataTable";
+import DynamicTable from "@/helpers/utils/DynamicTable";
+import BestSelling from "@/components/products/BestSelling";
 
 // Mock data
 const statsData = [
@@ -68,49 +63,6 @@ const statsData = [
     change: 0.5,
     trend: "up" as const,
     icon: Star,
-  },
-];
-
-const topProducts = [
-  {
-    id: "1",
-    name: "React Admin Dashboard",
-    category: "React",
-    sales: 234,
-    revenue: 15230,
-    rating: 4.9,
-    status: "published" as const,
-    lastUpdated: "2024-01-15",
-  },
-  {
-    id: "2",
-    name: "Vue E-commerce Template",
-    category: "Vue",
-    sales: 189,
-    revenue: 12890,
-    rating: 4.7,
-    status: "published" as const,
-    lastUpdated: "2024-01-14",
-  },
-  {
-    id: "3",
-    name: "Angular CRM System",
-    category: "Angular",
-    sales: 156,
-    revenue: 9870,
-    rating: 4.8,
-    status: "published" as const,
-    lastUpdated: "2024-01-13",
-  },
-  {
-    id: "4",
-    name: "Next.js Portfolio Theme",
-    category: "Next.js",
-    sales: 98,
-    revenue: 6540,
-    rating: 4.6,
-    status: "draft" as const,
-    lastUpdated: "2024-01-12",
   },
 ];
 
@@ -247,97 +199,8 @@ export default function DashboardPage() {
       {/* Products and Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-7 gap-4">
         {/* Top Products */}
-        <Card className="lg:col-span-4">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle>Top Performing Products</CardTitle>
-                <CardDescription className="mt-1">
-                  Your best-selling products and metrics
-                </CardDescription>
-              </div>
-              <Package className="h-5 w-5 text-muted-foreground" />
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="w-[200px]">Product</TableHead>
-                    <TableHead className="hidden sm:table-cell">
-                      Category
-                    </TableHead>
-                    <TableHead className="text-right">Sales</TableHead>
-                    <TableHead className="hidden md:table-cell text-right">
-                      Revenue
-                    </TableHead>
-                    <TableHead className="text-right">Rating</TableHead>
-                    <TableHead className="hidden lg:table-cell">
-                      Status
-                    </TableHead>
-                    <TableHead className="text-right">Actions</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {topProducts.map((product) => (
-                    <TableRow key={product.id}>
-                      <TableCell className="font-medium">
-                        <div className="flex items-center space-x-2">
-                          <Package className="h-4 w-4 text-muted-foreground" />
-                          <span className="truncate max-w-[140px]">
-                            {product.name}
-                          </span>
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge variant="outline" className="text-xs">
-                          {product.category}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="text-right font-medium">
-                        {product.sales}
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell text-right">
-                        ${product.revenue.toLocaleString()}
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <div className="flex items-center justify-end">
-                          <Star className="h-3 w-3 fill-yellow-400 text-yellow-400 mr-1" />
-                          {product.rating}
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden lg:table-cell">
-                        <Badge
-                          variant={
-                            product.status === "published"
-                              ? "default"
-                              : product.status === "draft"
-                              ? "secondary"
-                              : "outline"
-                          }
-                          className="text-xs"
-                        >
-                          {product.status}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="h-8 w-8 p-0"
-                        >
-                          <MoreHorizontal className="h-4 w-4" />
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
 
+        <BestSelling />
         {/* Recent Activity */}
         <Card className="lg:col-span-3">
           <CardHeader className="pb-3">
@@ -355,19 +218,19 @@ export default function DashboardPage() {
             <div className="space-y-4">
               {recentActivities.map((activity) => (
                 <div key={activity.id} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div
                       className={`
-                      flex items-center justify-center h-8 w-8 rounded-full
-                      ${
-                        activity.type === "sale"
-                          ? "bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400"
-                          : activity.type === "review"
-                          ? "bg-yellow-100 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400"
-                          : activity.type === "update"
-                          ? "bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
-                          : "bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400"
-                      }`}
+                flex items-center justify-center h-8 w-8 rounded-full
+                ${
+                  activity.type === "sale"
+                    ? "bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400"
+                    : activity.type === "review"
+                    ? "bg-yellow-100 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400"
+                    : activity.type === "update"
+                    ? "bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                    : "bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400"
+                }`}
                     >
                       <activity.icon className="h-4 w-4" />
                     </div>
@@ -394,6 +257,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
+      <DemoDataTable />
     </div>
   );
 }

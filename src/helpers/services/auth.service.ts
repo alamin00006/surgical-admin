@@ -6,7 +6,7 @@ import {
 import { getBaseUrl } from "@/helpers/config/envConfig";
 import { instance as axiosInstance } from "@/helpers/axios/axiosInstance";
 import { decodedToken } from "../utils/jwt";
-import { authKey } from "@/constants/authKey";
+import { authKey } from "@/constants/storageKey";
 
 // Type for the decoded token, adjust based on the actual structure of the decoded data
 interface DecodedToken {

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "1",
+    "name": "Classic Cotton Tee",
+    "category": "T-Shirt",
+    "sales": 532,
+    "revenue": 12768,
+    "rating": 4.8,
+    "status": "published",
+    "lastUpdated": "2024-03-15"
+  },
+  {
+    "id": "2",
+    "name": "Premium Oversized Tee",
+    "category": "T-Shirt",
+    "sales": 421,
+    "revenue": 11532,
+    "rating": 4.9,
+    "status": "published",
+    "lastUpdated": "2024-03-14"
+  },
+  {
+    "id": "3",
+    "name": "Graphic Streetwear Tee",
+    "category": "T-Shirt",
+    "sales": 398,
+    "revenue": 9552,
+    "rating": 4.7,
+    "status": "published",
+    "lastUpdated": "2024-03-13"
+  },
+  {
+    "id": "4",
+    "name": "Minimalist Logo Tee",
+    "category": "T-Shirt",
+    "sales": 276,
+    "revenue": 6624,
+    "rating": 4.6,
+    "status": "draft",
+    "lastUpdated": "2024-03-12"
+  },
+  {
+    "id": "5",
+    "name": "Vintage Washed Tee",
+    "category": "T-Shirt",
+    "sales": 350,
+    "revenue": 10150,
+    "rating": 4.8,
+    "status": "published",
+    "lastUpdated": "2024-03-11"
+  },
+  {
+    "id": "6",
+    "name": "Sports Performance Tee",
+    "category": "T-Shirt",
+    "sales": 487,
+    "revenue": 12662,
+    "rating": 4.9,
+    "status": "published",
+    "lastUpdated": "2024-03-10"
+  },
+  {
+    "id": "7",
+    "name": "Casual Daily Tee",
+    "category": "T-Shirt",
+    "sales": 589,
+    "revenue": 14136,
+    "rating": 4.7,
+    "status": "published",
+    "lastUpdated": "2024-03-09"
+  },
+  {
+    "id": "8",
+    "name": "Soft Touch Comfort Tee",
+    "category": "T-Shirt",
+    "sales": 621,
+    "revenue": 16086,
+    "rating": 4.5,
+    "status": "published",
+    "lastUpdated": "2024-03-08"
+  },
+  {
+    "id": "9",
+    "name": "Eco-Friendly Organic Tee",
+    "category": "T-Shirt",
+    "sales": 398,
+    "revenue": 11342,
+    "rating": 4.6,
+    "status": "published",
+    "lastUpdated": "2024-03-07"
+  },
+  {
+    "id": "10",
+    "name": "Motivational Text Tee",
+    "category": "T-Shirt",
+    "sales": 312,
+    "revenue": 8736,
+    "rating": 4.8,
+    "status": "published",
+    "lastUpdated": "2024-03-06"
+  },
+  {
+    "id": "11",
+    "name": "Urban Style Tee",
+    "category": "T-Shirt",
+    "sales": 485,
+    "revenue": 13095,
+    "rating": 4.4,
+    "status": "published",
+    "lastUpdated": "2024-03-05"
+  },
+  {
+    "id": "12",
+    "name": "Tie-Dye Color Tee",
+    "category": "T-Shirt",
+    "sales": 576,
+    "revenue": 15552,
+    "rating": 4.9,
+    "status": "published",
+    "lastUpdated": "2024-03-04"
+  },
+  {
+    "id": "13",
+    "name": "Slim Fit Flex Tee",
+    "category": "T-Shirt",
+    "sales": 268,
+    "revenue": 7218,
+    "rating": 4.7,
+    "status": "draft",
+    "lastUpdated": "2024-03-03"
+  },
+  {
+    "id": "14",
+    "name": "Heavyweight Premium Tee",
+    "category": "T-Shirt",
+    "sales": 199,
+    "revenue": 5572,
+    "rating": 4.8,
+    "status": "published",
+    "lastUpdated": "2024-03-02"
+  },
+  {
+    "id": "15",
+    "name": "Longline Street Tee",
+    "category": "T-Shirt",
+    "sales": 346,
+    "revenue": 9152,
+    "rating": 4.6,
+    "status": "published",
+    "lastUpdated": "2024-03-01"
+  },
+  {
+    "id": "16",
+    "name": "Retro Retro Print Tee",
+    "category": "T-Shirt",
+    "sales": 176,
+    "revenue": 4912,
+    "rating": 4.7,
+    "status": "archived",
+    "lastUpdated": "2024-02-29"
+  },
+  {
+    "id": "17",
+    "name": "Summer Breeze Tee",
+    "category": "T-Shirt",
+    "sales": 129,
+    "revenue": 3612,
+    "rating": 4.5,
+    "status": "published",
+    "lastUpdated": "2024-02-28"
+  },
+  {
+    "id": "18",
+    "name": "Minimal Aesthetic Tee",
+    "category": "T-Shirt",
+    "sales": 243,
+    "revenue": 6561,
+    "rating": 4.6,
+    "status": "published",
+    "lastUpdated": "2024-02-27"
+  },
+  {
+    "id": "19",
+    "name": "Workout Gym Tee",
+    "category": "T-Shirt",
+    "sales": 312,
+    "revenue": 9360,
+    "rating": 4.8,
+    "status": "draft",
+    "lastUpdated": "2024-02-26"
+  },
+  {
+    "id": "20",
+    "name": "Comfort Stretch Tee",
+    "category": "T-Shirt",
+    "sales": 487,
+    "revenue": 12662,
+    "rating": 4.9,
+    "status": "published",
+    "lastUpdated": "2024-02-25"
+  },
+  {
+    "id": "21",
+    "name": "Classic Crew Neck Tee",
+    "category": "T-Shirt",
+    "sales": 342,
+    "revenue": 9576,
+    "rating": 4.7,
+    "status": "published",
+    "lastUpdated": "2024-02-24"
+  },
+  {
+    "id": "22",
+    "name": "Travel Adventure Tee",
+    "category": "T-Shirt",
+    "sales": 423,
+    "revenue": 11076,
+    "rating": 4.8,
+    "status": "published",
+    "lastUpdated": "2024-02-23"
+  },
+  {
+    "id": "23",
+    "name": "Nature Art Tee",
+    "category": "T-Shirt",
+    "sales": 198,
+    "revenue": 5148,
+    "rating": 4.5,
+    "status": "published",
+    "lastUpdated": "2024-02-22"
+  },
+  {
+    "id": "24",
+    "name": "Monochrome Black Tee",
+    "category": "T-Shirt",
+    "sales": 321,
+    "revenue": 8997,
+    "rating": 4.7,
+    "status": "published",
+    "lastUpdated": "2024-02-21"
+  },
+  {
+    "id": "25",
+    "name": "Limited Edition Art Tee",
+    "category": "T-Shirt",
+    "sales": 278,
+    "revenue": 8340,
+    "rating": 4.6,
+    "status": "archived",
+    "lastUpdated": "2024-02-20"
+  },
+  {
+    "id": "26",
+    "name": "Neon Glow Tee",
+    "category": "T-Shirt",
+    "sales": 153,
+    "revenue": 4284,
+    "rating": 4.8,
+    "status": "published",
+    "lastUpdated": "2024-02-19"
+  },
+  {
+    "id": "27",
+    "name": "College Varsity Tee",
+    "category": "T-Shirt",
+    "sales": 267,
+    "revenue": 7209,
+    "rating": 4.7,
+    "status": "published",
+    "lastUpdated": "2024-02-18"
+  },
+  {
+    "id": "28",
+    "name": "Korean Oversize Tee",
+    "category": "T-Shirt",
+    "sales": 98,
+    "revenue": 2744,
+    "rating": 4.5,
+    "status": "draft",
+    "lastUpdated": "2024-02-17"
+  },
+  {
+    "id": "29",
+    "name": "Luxury Embroidery Tee",
+    "category": "T-Shirt",
+    "sales": 412,
+    "revenue": 14420,
+    "rating": 4.9,
+    "status": "published",
+    "lastUpdated": "2024-02-16"
+  },
+  {
+    "id": "30",
+    "name": "Artistic Brush Stroke Tee",
+    "category": "T-Shirt",
+    "sales": 287,
+    "revenue": 7462,
+    "rating": 4.7,
+    "status": "published",
+    "lastUpdated": "2024-02-15"
+  }
+]

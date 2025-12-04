@@ -1,0 +1,9 @@
+{
+  "/api/*": "/$1",
+  "/products/search/:term": "/products?q=:term",
+  "/products/category/:category": "/products?category=:category",
+  "/products/status/:status": "/products?status=:status",
+  "/dashboard/stats": "/analytics/dashboard",
+  "/users/:id/products": "/products?userId=:id",
+  "/users/me": "/users/1"
+}

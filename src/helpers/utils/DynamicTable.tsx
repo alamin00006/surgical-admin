@@ -9,7 +9,7 @@ import {
   MoreVertical,
   SortAsc,
 } from "lucide-react";
-import { SortConfig, TableProps } from "./table.types";
+import { SortConfig, TableProps } from "../../types/table.types";
 import {
   Table,
   TableBody,

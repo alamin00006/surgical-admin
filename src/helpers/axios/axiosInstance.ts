@@ -5,9 +5,9 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios";
 
-import { authKey } from "@/constants/authKey";
 import { getFromLocalStorage, setToLocalStorage } from "../utils/local-storage";
-import { getNewAccessToken } from "../services/auth.service";
+// import { getNewAccessToken } from "../services/auth.service";
+import { authKey } from "@/constants/storageKey";
 
 // Custom response shape
 interface APIResponse<T = any> {
@@ -28,12 +28,12 @@ instance.interceptors.request.use(
     }
     return config;
   },
-  (error) => Promise.reject(error),
+  (error) => Promise.reject(error)
 );
 
 // Response interceptor — just return response
 instance.interceptors.response.use(
-  (response: AxiosResponse) => response,
+  (response: AxiosResponse) => response
   // async (error) => {
   //   const config = error.config as AxiosRequestConfig & { sent?: boolean };
 
@@ -54,7 +54,7 @@ instance.interceptors.response.use(
 );
 
 export const request = async <T = any>(
-  config: AxiosRequestConfig,
+  config: AxiosRequestConfig
 ): Promise<APIResponse<T>> => {
   const response = await instance.request<T>(config);
   return { data: (response.data as any)?.data };
